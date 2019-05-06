@@ -41,17 +41,15 @@
 			if($pathlogo != "" and file_exists(DOCROOT.'/workspace/'.$pathlogo)) {
 				//controllo l'esistenza e le misure del logo
 				$page->addElementToHead(new XMLElement("style", "
-					body #wrapper #header h1 {
-						position: relative;
-						padding: 10px 19px;
+					body #header h1 a {
+						background: url(" . URL . '/workspace/' . $pathlogo . ") no-repeat;
+						background-position-x: var(--spacing-smallish);
+						background-position-y: 50%;
 					}
-					body #wrapper #header h1 a {
-						display: block;
-						height: 70px;
-						background: url(" .URL.'/image/2/0/70/5/'.$pathlogo . ") no-repeat;
-						text-indent:-1000px;
-						border-bottom: none !important;
-					}",
+					body #header h1 a .sun {
+						display: none;
+					}
+					",
 					array(
 						"type" => "text/css",
 						"media" => "screen, projection")
