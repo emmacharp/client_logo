@@ -43,8 +43,10 @@
 				$page->addElementToHead(new XMLElement("style", "
 					body #header h1 a {
 						background: url(" . URL . '/workspace/' . $pathlogo . ") no-repeat;
-						background-position-x: var(--spacing-smallish);
-						background-position-y: 50%;
+						background-position-x: var(--standard-outer-rhythm);
+						background-position-y: var(--standard-inner-rhythm);
+						height: 30px;
+						color: transparent;
 					}
 					body #header h1 a .sun {
 						display: none;
